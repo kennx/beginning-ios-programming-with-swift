@@ -24,6 +24,8 @@ class RestaurantTableViewController: UITableViewController {
     
     tableView.dataSource = dataSource
     
+    tableView.separatorStyle = .none
+    
     var snapshot = NSDiffableDataSourceSnapshot<Section, String>()
     snapshot.appendSections([.all])
     snapshot.appendItems(restaurantNames, toSection: .all)
