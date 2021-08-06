@@ -17,6 +17,8 @@ class RestaurantTableViewController: UITableViewController {
 
   var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea House", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea", "Coffee & Tea", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
   
+  var restaurantIsFavorites = Array(repeating: false, count: 21)
+  
   lazy var dataSource = configureDataSource()
   
   override func viewDidLoad() {
@@ -35,6 +37,7 @@ class RestaurantTableViewController: UITableViewController {
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    tableView.cellLayoutMarginsFollowReadableWidth = true
   }
   
   // MARK: - Table view data source
@@ -104,6 +107,51 @@ class RestaurantTableViewController: UITableViewController {
    }
    */
   
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    //
+    let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
+    
+    if let popoverController = optionMenu.popoverPresentationController {
+      if let cell = tableView.cellForRow(at: indexPath) {
+        popoverController.sourceView = cell
+        popoverController.sourceRect = cell.bounds
+      }
+    }
+    
+    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+    
+    
+    let reserveActionHandler = { (action: UIAlertAction!) -> Void in
+      let alertMessage = UIAlertController(title: "Not available yet", message: "Sorry, this feature is not available yet.Please retry later", preferredStyle: .alert)
+      self.present(alertMessage, animated: true, completion: nil)
+    }
+    
+    let reserveAction = UIAlertAction(title: "Reserve a table", style: .default, handler: reserveActionHandler)
+    
+    let favoriteAction = UIAlertAction(title: self.restaurantIsFavorites[indexPath.row] ? "Remove from favorites" : "Mask as favorite", style: .default, handler: {
+      (action: UIAlertAction!) -> Void in
+      let cell = tableView.cellForRow(at: indexPath)
+      cell?.accessoryType = .checkmark
+      cell?.tintColor = .systemYellow
+      self.restaurantIsFavorites[indexPath.row].toggle()
+      
+      cell?.accessoryType = self.restaurantIsFavorites[indexPath.row] ? .checkmark : .none
+    })
+    
+    
+    optionMenu.addAction(favoriteAction)
+    optionMenu.addAction(reserveAction)
+    
+    optionMenu.addAction(cancelAction)
+    
+    present(optionMenu, animated: true, completion: nil)
+    
+    tableView.deselectRow(at: indexPath, animated: false)
+    
+  }
+  
   func configureDataSource() -> UITableViewDiffableDataSource<Section, String> {
     let cellIdentifier = "datacell"
     
@@ -111,6 +159,8 @@ class RestaurantTableViewController: UITableViewController {
       tableView: tableView,
       cellProvider: {  tableView, indexPath, restaurantName in
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
+        
+        cell.accessoryType = self.restaurantIsFavorites[indexPath.row] ? .checkmark : .none
         
         cell.nameLabel.text = restaurantName
         cell.thumbnailImageView.image = UIImage(named: self.restaurantImages[indexPath.row])
