@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38BEF87426BCCB6A005C9B2F /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BEF87326BCCB6A005C9B2F /* RestaurantTableViewCell.swift */; };
 		38EE769026BBC9B7008311B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EE768F26BBC9B7008311B6 /* AppDelegate.swift */; };
 		38EE769226BBC9B7008311B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EE769126BBC9B7008311B6 /* SceneDelegate.swift */; };
 		38EE769726BBC9B7008311B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38EE769526BBC9B7008311B6 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38BEF87326BCCB6A005C9B2F /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		38EE768C26BBC9B7008311B6 /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38EE768F26BBC9B7008311B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38EE769126BBC9B7008311B6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				38EE769A26BBC9B9008311B6 /* LaunchScreen.storyboard */,
 				38EE769D26BBC9B9008311B6 /* Info.plist */,
 				38EE76A326BBCAE9008311B6 /* RestaurantTableViewController.swift */,
+				38BEF87326BCCB6A005C9B2F /* RestaurantTableViewCell.swift */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38BEF87426BCCB6A005C9B2F /* RestaurantTableViewCell.swift in Sources */,
 				38EE769026BBC9B7008311B6 /* AppDelegate.swift in Sources */,
 				38EE769226BBC9B7008311B6 /* SceneDelegate.swift in Sources */,
 				38EE76A426BBCAE9008311B6 /* RestaurantTableViewController.swift in Sources */,
