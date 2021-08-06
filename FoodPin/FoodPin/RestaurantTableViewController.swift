@@ -132,12 +132,10 @@ class RestaurantTableViewController: UITableViewController {
     
     let favoriteAction = UIAlertAction(title: self.restaurantIsFavorites[indexPath.row] ? "Remove from favorites" : "Mask as favorite", style: .default, handler: {
       (action: UIAlertAction!) -> Void in
-      let cell = tableView.cellForRow(at: indexPath)
-      cell?.accessoryType = .checkmark
-      cell?.tintColor = .systemYellow
+      let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
+      cell.tintColor = .systemYellow
       self.restaurantIsFavorites[indexPath.row].toggle()
-      
-      cell?.accessoryType = self.restaurantIsFavorites[indexPath.row] ? .checkmark : .none
+      cell.heartImageView.isHidden = !self.restaurantIsFavorites[indexPath.row]
     })
     
     
@@ -153,14 +151,14 @@ class RestaurantTableViewController: UITableViewController {
   }
   
   func configureDataSource() -> UITableViewDiffableDataSource<Section, String> {
-    let cellIdentifier = "datacell"
+    let cellIdentifier = "favoritecell"
     
     let dataSource = UITableViewDiffableDataSource<Section, String>(
       tableView: tableView,
       cellProvider: {  tableView, indexPath, restaurantName in
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RestaurantTableViewCell
         
-        cell.accessoryType = self.restaurantIsFavorites[indexPath.row] ? .checkmark : .none
+        cell.heartImageView.isHidden = !self.restaurantIsFavorites[indexPath.row]
         
         cell.nameLabel.text = restaurantName
         cell.thumbnailImageView.image = UIImage(named: self.restaurantImages[indexPath.row])
