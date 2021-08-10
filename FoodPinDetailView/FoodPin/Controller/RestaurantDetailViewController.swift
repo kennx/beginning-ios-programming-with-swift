@@ -17,6 +17,9 @@ class RestaurantDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+      
+      
+        
         navigationController?.navigationBar.prefersLargeTitles = false
 
         // Configure header view
@@ -32,6 +35,8 @@ class RestaurantDetailViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+      
+      tableView.contentInsetAdjustmentBehavior = .never
     }
     
 
