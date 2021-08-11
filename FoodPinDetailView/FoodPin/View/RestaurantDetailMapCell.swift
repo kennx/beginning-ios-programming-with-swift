@@ -10,7 +10,12 @@ import MapKit
 
 class RestaurantDetailMapCell: UITableViewCell {
   
-  @IBOutlet var mapView: MKMapView!
+  @IBOutlet var mapView: MKMapView! {
+    didSet {
+      mapView.clipsToBounds = true
+      mapView.layer.cornerRadius = 20
+    }
+  }
   
   override func awakeFromNib() {
     super.awakeFromNib()

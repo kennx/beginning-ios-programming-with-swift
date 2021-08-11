@@ -332,24 +332,24 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RestaurantDetailMapCell" id="e2Z-Ch-e5A" customClass="RestaurantDetailMapCell" customModule="FoodPin" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="573.00000190734863" width="390" height="200.33332824707031"/>
+                                        <rect key="frame" x="0.0" y="573.00000190734863" width="390" height="240.33332824707031"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e2Z-Ch-e5A" id="eGu-Iu-6Zi">
-                                            <rect key="frame" x="0.0" y="0.0" width="390" height="200.33332824707031"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="240.33332824707031"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAc-WR-qA4">
-                                                    <rect key="frame" x="0.0" y="0.0" width="390" height="200.33333333333334"/>
+                                                    <rect key="frame" x="20" y="20" width="350" height="200.33333333333334"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="4Je-1A-cXb"/>
                                                     </constraints>
                                                 </mapView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="LAc-WR-qA4" firstAttribute="leading" secondItem="eGu-Iu-6Zi" secondAttribute="leading" id="4Kk-Lc-ZSi"/>
-                                                <constraint firstAttribute="bottom" secondItem="LAc-WR-qA4" secondAttribute="bottom" id="epG-nI-Glt"/>
-                                                <constraint firstItem="LAc-WR-qA4" firstAttribute="top" secondItem="eGu-Iu-6Zi" secondAttribute="top" id="kYe-k5-nex"/>
-                                                <constraint firstAttribute="trailing" secondItem="LAc-WR-qA4" secondAttribute="trailing" id="mCO-rg-dfb"/>
+                                                <constraint firstItem="LAc-WR-qA4" firstAttribute="leading" secondItem="eGu-Iu-6Zi" secondAttribute="leading" constant="20" id="4Kk-Lc-ZSi"/>
+                                                <constraint firstAttribute="bottom" secondItem="LAc-WR-qA4" secondAttribute="bottom" constant="20" id="epG-nI-Glt"/>
+                                                <constraint firstItem="LAc-WR-qA4" firstAttribute="top" secondItem="eGu-Iu-6Zi" secondAttribute="top" constant="20" id="kYe-k5-nex"/>
+                                                <constraint firstAttribute="trailing" secondItem="LAc-WR-qA4" secondAttribute="trailing" constant="20" id="mCO-rg-dfb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
