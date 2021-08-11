@@ -50,6 +50,13 @@ class RestaurantDetailViewController: UIViewController {
     return .lightContent
   }
   
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "showMap" {
+      let destinationController = segue.destination as! MapViewController
+      destinationController.restaurant = restaurant
+    }
+  }
+  
   
 }
 
@@ -66,6 +73,7 @@ extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDele
       let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailTextCell.self), for: indexPath) as! RestaurantDetailTextCell
       
       cell.descriptionLabel.text = restaurant.description
+      cell.selectionStyle = .none
       
       return cell
       
@@ -76,11 +84,16 @@ extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDele
       cell.column1TextLabel.text = restaurant.location
       cell.column2TitleLabel.text = "Phone"
       cell.column2TextLabel.text = restaurant.phone
+      cell.selectionStyle = .none
       
       return cell
-    
+      
     case 2:
       let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailMapCell.self), for: indexPath) as! RestaurantDetailMapCell
+      
+      cell.configure(location: restaurant.location)
+      cell.selectionStyle = .none
+      
       return cell
       
     default:
@@ -88,5 +101,7 @@ extension RestaurantDetailViewController: UITableViewDataSource, UITableViewDele
       
     }
   }
+  
+  
   
 }

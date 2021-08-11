@@ -11,6 +11,7 @@
 		3818E76D26C37CB600FA51D8 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818E76C26C37CB600FA51D8 /* NavigationController.swift */; };
 		3818E77026C3A4B400FA51D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3818E76F26C3A4B400FA51D8 /* MapKit.framework */; };
 		3818E77226C3A5CB00FA51D8 /* RestaurantDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818E77126C3A5CB00FA51D8 /* RestaurantDetailMapCell.swift */; };
+		3818E77426C3AF0200FA51D8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818E77326C3AF0200FA51D8 /* MapViewController.swift */; };
 		3840183526C1273300D9E16E /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3840182726C1273200D9E16E /* Nunito-LightItalic.ttf */; };
 		3840183626C1273300D9E16E /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3840182826C1273200D9E16E /* Nunito-ExtraBoldItalic.ttf */; };
 		3840183726C1273300D9E16E /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3840182926C1273200D9E16E /* Nunito-BoldItalic.ttf */; };
@@ -45,6 +46,7 @@
 		3818E76C26C37CB600FA51D8 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		3818E76F26C3A4B400FA51D8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3818E77126C3A5CB00FA51D8 /* RestaurantDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailMapCell.swift; sourceTree = "<group>"; };
+		3818E77326C3AF0200FA51D8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3840182726C1273200D9E16E /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
 		3840182826C1273200D9E16E /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		3840182926C1273200D9E16E /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				F48D555A2536BFE000CE6DE4 /* RestaurantTableViewController.swift */,
 				F4D1A1D82540370700CCD3FA /* RestaurantDetailViewController.swift */,
 				3818E76C26C37CB600FA51D8 /* NavigationController.swift */,
+				3818E77326C3AF0200FA51D8 /* MapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				3818E77226C3A5CB00FA51D8 /* RestaurantDetailMapCell.swift in Sources */,
 				38BEF88026BE8EBD005C9B2F /* RestaurantDetailHeaderView.swift in Sources */,
 				F48D555B2536BFE000CE6DE4 /* RestaurantTableViewController.swift in Sources */,
+				3818E77426C3AF0200FA51D8 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
