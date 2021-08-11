@@ -176,7 +176,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HMT-j4-Pyy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HMT-j4-Pyy">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="1000"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="JJP-V2-lC3" userLabel="Header View" customClass="RestaurantDetailHeaderView" customModule="FoodPin" customModuleProvider="target">
@@ -380,10 +380,10 @@
             </objects>
             <point key="canvasLocation" x="1618.4615384615383" y="88.862559241706151"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="6tJ-Ki-suB">
             <objects>
-                <viewController id="6Ur-nM-kRO" sceneMemberID="viewController">
+                <viewController id="6Ur-nM-kRO" customClass="MapViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kqu-mt-unq">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -401,7 +401,10 @@
                             <constraint firstAttribute="trailing" secondItem="L95-1W-7M5" secondAttribute="trailing" id="Of8-g8-2rs"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aGv-Yv-YtP"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="aGv-Yv-YtP"/>
+                    <connections>
+                        <outlet property="mapView" destination="L95-1W-7M5" id="b4Q-bR-6PM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQO-MA-iZ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
