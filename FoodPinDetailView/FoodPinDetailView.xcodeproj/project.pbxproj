@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3818E76B26C3768E00FA51D8 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818E76A26C3768E00FA51D8 /* UIColor+Ext.swift */; };
 		3818E76D26C37CB600FA51D8 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818E76C26C37CB600FA51D8 /* NavigationController.swift */; };
+		3818E77026C3A4B400FA51D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3818E76F26C3A4B400FA51D8 /* MapKit.framework */; };
+		3818E77226C3A5CB00FA51D8 /* RestaurantDetailMapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3818E77126C3A5CB00FA51D8 /* RestaurantDetailMapCell.swift */; };
 		3840183526C1273300D9E16E /* Nunito-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3840182726C1273200D9E16E /* Nunito-LightItalic.ttf */; };
 		3840183626C1273300D9E16E /* Nunito-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3840182826C1273200D9E16E /* Nunito-ExtraBoldItalic.ttf */; };
 		3840183726C1273300D9E16E /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3840182926C1273200D9E16E /* Nunito-BoldItalic.ttf */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		3818E76A26C3768E00FA51D8 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
 		3818E76C26C37CB600FA51D8 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		3818E76F26C3A4B400FA51D8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3818E77126C3A5CB00FA51D8 /* RestaurantDetailMapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailMapCell.swift; sourceTree = "<group>"; };
 		3840182726C1273200D9E16E /* Nunito-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-LightItalic.ttf"; sourceTree = "<group>"; };
 		3840182826C1273200D9E16E /* Nunito-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		3840182926C1273200D9E16E /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3818E77026C3A4B400FA51D8 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +94,14 @@
 				3818E76A26C3768E00FA51D8 /* UIColor+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3818E76E26C3A4B400FA51D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3818E76F26C3A4B400FA51D8 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3840182526C1271000D9E16E /* Resources */ = {
@@ -125,6 +138,7 @@
 			children = (
 				F48D55432536BAE700CE6DE4 /* FoodPin */,
 				F48D55422536BAE700CE6DE4 /* Products */,
+				3818E76E26C3A4B400FA51D8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,6 +184,7 @@
 				38BEF87F26BE8EBD005C9B2F /* RestaurantDetailHeaderView.swift */,
 				3840184326C12F3300D9E16E /* RestaurantDetailTextCell.swift */,
 				3840184526C131B300D9E16E /* RestaurantDetailTwoColumnCell.swift */,
+				3818E77126C3A5CB00FA51D8 /* RestaurantDetailMapCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -286,6 +301,7 @@
 				F48D55472536BAE700CE6DE4 /* SceneDelegate.swift in Sources */,
 				F4D1A1D6253EB90C00CCD3FA /* RestaurantDiffableDataSource.swift in Sources */,
 				F4D1A1D92540370700CCD3FA /* RestaurantDetailViewController.swift in Sources */,
+				3818E77226C3A5CB00FA51D8 /* RestaurantDetailMapCell.swift in Sources */,
 				38BEF88026BE8EBD005C9B2F /* RestaurantDetailHeaderView.swift in Sources */,
 				F48D555B2536BFE000CE6DE4 /* RestaurantTableViewController.swift in Sources */,
 			);
