@@ -176,7 +176,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HMT-j4-Pyy">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HMT-j4-Pyy">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="1000"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="JJP-V2-lC3" userLabel="Header View" customClass="RestaurantDetailHeaderView" customModule="FoodPin" customModuleProvider="target">
@@ -354,6 +354,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="mapView" destination="LAc-WR-qA4" id="2lu-za-Vg1"/>
+                                            <segue destination="6Ur-nM-kRO" kind="show" identifier="showMap" id="0YV-4e-PCs"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -378,6 +379,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3l-Qa-mJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1618.4615384615383" y="88.862559241706151"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6tJ-Ki-suB">
+            <objects>
+                <viewController id="6Ur-nM-kRO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kqu-mt-unq">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="L95-1W-7M5">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cPq-PF-Geo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="L95-1W-7M5" firstAttribute="leading" secondItem="kqu-mt-unq" secondAttribute="leading" id="E9Q-PU-gKg"/>
+                            <constraint firstAttribute="bottom" secondItem="L95-1W-7M5" secondAttribute="bottom" id="FnC-vD-D61"/>
+                            <constraint firstItem="L95-1W-7M5" firstAttribute="top" secondItem="kqu-mt-unq" secondAttribute="top" id="KjV-6E-BfD"/>
+                            <constraint firstAttribute="trailing" secondItem="L95-1W-7M5" secondAttribute="trailing" id="Of8-g8-2rs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aGv-Yv-YtP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EQO-MA-iZ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2494" y="89"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="j94-qC-7vx">
