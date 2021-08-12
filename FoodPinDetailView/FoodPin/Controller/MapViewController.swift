@@ -11,12 +11,17 @@ import MapKit
 class MapViewController: UIViewController {
   
   @IBOutlet var mapView: MKMapView!
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 9425ffe... update
   var restaurant: Restaurant = Restaurant()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     mapView.delegate = self
+<<<<<<< HEAD
     
     mapView.showsScale = true
     mapView.showsTraffic = true
@@ -25,6 +30,15 @@ class MapViewController: UIViewController {
     let geoCoder = CLGeocoder()
     
     geoCoder.geocodeAddressString(restaurant.location) { placemarks, error in
+=======
+    mapView.showsCompass = true
+    mapView.showsScale = true
+    mapView.showsTraffic = true
+    
+    let geoCoder = CLGeocoder()
+    
+    geoCoder.geocodeAddressString(restaurant.location) { (placemarks, error) in
+>>>>>>> 9425ffe... update
       if let error = error {
         print(error.localizedDescription)
         return
@@ -64,10 +78,15 @@ class MapViewController: UIViewController {
 
 
 extension MapViewController: MKMapViewDelegate {
+<<<<<<< HEAD
   
   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     let identifier = "MyMarker"
     
+=======
+  func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    let identifier = "MyMarker"
+>>>>>>> 9425ffe... update
     if annotation.isKind(of: MKUserLocation.self) {
       return nil
     }
@@ -77,6 +96,7 @@ extension MapViewController: MKMapViewDelegate {
     if annotationView == nil {
       annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
     }
+<<<<<<< HEAD
     
     annotationView?.glyphText = "😋"
     // annotationView?.glyphImage = UIImage(systemName: "arrowtriangle.down.circle")
@@ -85,4 +105,10 @@ extension MapViewController: MKMapViewDelegate {
     return annotationView
   }
   
+=======
+    annotationView?.glyphImage = UIImage(systemName: "arrowtriangle.down.circle")
+    annotationView?.markerTintColor = UIColor.orange
+    return annotationView
+  }
+>>>>>>> 9425ffe... update
 }
