@@ -27,17 +27,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newphoto" translatesAutoresizingMaskIntoConstraints="NO" id="pD4-YN-sDA">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="newphoto" translatesAutoresizingMaskIntoConstraints="NO" id="pD4-YN-sDA">
                                                     <rect key="frame" x="20" y="11" width="350" height="178"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemGray6Color"/>
                                                 </imageView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="pD4-YN-sDA" firstAttribute="top" secondItem="1BS-6u-8aL" secondAttribute="topMargin" id="0MO-wn-QGG"/>
-                                                <constraint firstItem="pD4-YN-sDA" firstAttribute="leading" secondItem="1BS-6u-8aL" secondAttribute="leadingMargin" id="aja-9Q-KtY"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="pD4-YN-sDA" secondAttribute="bottom" id="fgj-Br-D1H"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="pD4-YN-sDA" secondAttribute="trailing" id="uzD-M0-H4x"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="89" id="Ike-6L-eUp">
@@ -217,12 +212,19 @@
                                 <segue destination="e3x-aT-gQQ" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="oHG-iz-D9V"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="NCc-Sf-RIt">
+                            <color key="tintColor" name="NavigationBarTitle"/>
+                            <connections>
+                                <action selector="saveRestaurantWithSender:" destination="869-rB-O8d" id="uVQ-SC-sqx"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addressTextField" destination="b6o-4A-LRS" id="oAm-xs-awF"/>
                         <outlet property="descriptionTextView" destination="Ad6-Za-eF0" id="OUR-Zx-4cL"/>
                         <outlet property="nameTextField" destination="ZfQ-0K-UeE" id="Vxh-4E-Hq9"/>
                         <outlet property="phoneTextField" destination="asG-iM-GmA" id="0FJ-8i-aFV"/>
+                        <outlet property="photoImageView" destination="pD4-YN-sDA" id="J06-oD-9WR"/>
                         <outlet property="typeTextField" destination="V06-Os-jhn" id="bU3-h2-fM4"/>
                     </connections>
                 </tableViewController>
