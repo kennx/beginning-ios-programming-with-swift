@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		387DD25F26C5FE5300BDCE00 /* RoundedBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387DD25E26C5FE5300BDCE00 /* RoundedBorderTextField.swift */; };
+		387DD26126C5FFA100BDCE00 /* NewRestaurantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387DD26026C5FFA100BDCE00 /* NewRestaurantController.swift */; };
 		F42A6C6F2543E05F009E2876 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F42A6C6D2543E05F009E2876 /* Nunito-Bold.ttf */; };
 		F42A6C702543E05F009E2876 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F42A6C6E2543E05F009E2876 /* Nunito-Regular.ttf */; };
 		F42A6C73254569E3009E2876 /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A6C72254569E3009E2876 /* RestaurantDetailHeaderView.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		387DD25E26C5FE5300BDCE00 /* RoundedBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderTextField.swift; sourceTree = "<group>"; };
+		387DD26026C5FFA100BDCE00 /* NewRestaurantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRestaurantController.swift; sourceTree = "<group>"; };
 		F42A6C6D2543E05F009E2876 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		F42A6C6E2543E05F009E2876 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		F42A6C72254569E3009E2876 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				F42A6C812549DE6F009E2876 /* NavigationController.swift */,
 				F42A6C8F254BD4F0009E2876 /* MapViewController.swift */,
 				F48F8131254FC0860062C520 /* ReviewViewController.swift */,
+				387DD26026C5FFA100BDCE00 /* NewRestaurantController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 				F42A6C75254726D9009E2876 /* RestaurantDetailTextCell.swift */,
 				F42A6C782547D3A3009E2876 /* RestaurantDetailTwoColumnCell.swift */,
 				F42A6C8C254AC3D6009E2876 /* RestaurantDetailMapCell.swift */,
+				387DD25E26C5FE5300BDCE00 /* RoundedBorderTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -211,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F48D553C2536BAE700CE6DE4 /* Build configuration list for PBXProject "FoodPin" */;
+			buildConfigurationList = F48D553C2536BAE700CE6DE4 /* Build configuration list for PBXProject "FoodPinStaticTableStarter" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -251,6 +257,7 @@
 			files = (
 				F4D1A1CE253D8C5600CCD3FA /* Restaurant.swift in Sources */,
 				F42A6C822549DE6F009E2876 /* NavigationController.swift in Sources */,
+				387DD26126C5FFA100BDCE00 /* NewRestaurantController.swift in Sources */,
 				F48F8132254FC0860062C520 /* ReviewViewController.swift in Sources */,
 				F42A6C76254726D9009E2876 /* RestaurantDetailTextCell.swift in Sources */,
 				F43B1C3625382DF300777A57 /* RestaurantTableViewCell.swift in Sources */,
@@ -264,6 +271,7 @@
 				F42A6C73254569E3009E2876 /* RestaurantDetailHeaderView.swift in Sources */,
 				F48D555B2536BFE000CE6DE4 /* RestaurantTableViewController.swift in Sources */,
 				F42A6C90254BD4F1009E2876 /* MapViewController.swift in Sources */,
+				387DD25F26C5FE5300BDCE00 /* RoundedBorderTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,7 +452,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F48D553C2536BAE700CE6DE4 /* Build configuration list for PBXProject "FoodPin" */ = {
+		F48D553C2536BAE700CE6DE4 /* Build configuration list for PBXProject "FoodPinStaticTableStarter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F48D55532536BAE900CE6DE4 /* Debug */,
