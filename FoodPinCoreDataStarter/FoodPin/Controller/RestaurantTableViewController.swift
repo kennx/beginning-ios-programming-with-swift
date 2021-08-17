@@ -10,6 +10,8 @@ import CoreData
 
 class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
   
+  var searchController: UISearchController!
+  
   @IBOutlet var emptyRestaurantView: UIView!
   
   var restaurants: [Restaurant] = []
@@ -22,6 +24,16 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    searchController = UISearchController(searchResultsController: nil)
+    tableView.tableHeaderView = searchController.searchBar
+    
+    searchController.searchResultsUpdater = self
+    searchController.obscuresBackgroundDuringPresentation = false
+    
+    searchController.searchBar.placeholder = "Search restaurants"
+    searchController.searchBar.backgroundImage = UIImage()
+    searchController.searchBar.tintColor = UIColor(named: "NavigationBarTitle")
     
     fetchRestaurantData()
     
@@ -93,6 +105,10 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
   // MARK: - UITableViewDelegate Protocol
   
   override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    
+    if searchController.isActive {
+      return UISwipeActionsConfiguration()
+    }
     
     // Get the selected restaurant
     guard let restaurant = self.dataSource.itemIdentifier(for: indexPath) else {
@@ -188,22 +204,41 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     dismiss(animated: true, completion: nil)
   }
   
-  func fetchRestaurantData() {
+  func fetchRestaurantData(searchText: String = "") {
     let fetchRequest: NSFetchRequest<Restaurant> = Restaurant.fetchRequest()
+    if !searchText.isEmpty {
+      fetchRequest.predicate = NSPredicate(format: "name CONTAINS[C]%@", searchText)
+    }
+    
     let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
     fetchRequest.sortDescriptors = [sortDescriptor]
     
     if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
       let context = appDelegate.persistentContainer.viewContext
-      fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nibName)
+      fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
       fetchResultController.delegate = self
+      
       do {
         try fetchResultController.performFetch()
-        updateSnapshot()
-      } catch {
+        updateSnapshot(animatingChange: searchText.isEmpty ? false : true)
+      } catch  {
         print(error.localizedDescription)
       }
     }
+//    let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+//    fetchRequest.sortDescriptors = [sortDescriptor]
+//
+//    if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+//      let context = appDelegate.persistentContainer.viewContext
+//      fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nibName)
+//      fetchResultController.delegate = self
+//      do {
+//        try fetchResultController.performFetch()
+//        updateSnapshot()
+//      } catch {
+//        print(error.localizedDescription)
+//      }
+//    }
   }
   
   func updateSnapshot(animatingChange: Bool = false) {
@@ -224,3 +259,12 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
   }
 }
 
+extension RestaurantTableViewController: UISearchResultsUpdating {
+  func updateSearchResults(for searchController: UISearchController) {
+    guard let searchText = searchController.searchBar.text else {
+      return
+    }
+    
+    fetchRestaurantData(searchText: searchText)
+  }
+}
