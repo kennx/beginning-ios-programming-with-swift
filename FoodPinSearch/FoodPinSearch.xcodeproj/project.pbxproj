@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		383A69C826CB5DD1000910E8 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383A69C626CB5DD1000910E8 /* Onboarding.storyboard */; };
+		383A69CA26CBA95C000910E8 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383A69C926CBA95C000910E8 /* WalkthroughContentViewController.swift */; };
+		383A69CC26CBABE2000910E8 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383A69CB26CBABE2000910E8 /* WalkthroughPageViewController.swift */; };
 		F42A6C6F2543E05F009E2876 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F42A6C6D2543E05F009E2876 /* Nunito-Bold.ttf */; };
 		F42A6C702543E05F009E2876 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F42A6C6E2543E05F009E2876 /* Nunito-Regular.ttf */; };
 		F42A6C73254569E3009E2876 /* RestaurantDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42A6C72254569E3009E2876 /* RestaurantDetailHeaderView.swift */; };
@@ -34,6 +37,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		383A69C726CB5DD1000910E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboarding.storyboard; sourceTree = "<group>"; };
+		383A69C926CBA95C000910E8 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
+		383A69CB26CBABE2000910E8 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
 		F42A6C6D2543E05F009E2876 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		F42A6C6E2543E05F009E2876 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		F42A6C72254569E3009E2876 /* RestaurantDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailHeaderView.swift; sourceTree = "<group>"; };
@@ -151,6 +157,8 @@
 				F42A6C8F254BD4F0009E2876 /* MapViewController.swift */,
 				F48F8131254FC0860062C520 /* ReviewViewController.swift */,
 				F480451925512B7F00DDC281 /* NewRestaurantController.swift */,
+				383A69C926CBA95C000910E8 /* WalkthroughContentViewController.swift */,
+				383A69CB26CBABE2000910E8 /* WalkthroughPageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,6 +190,7 @@
 			children = (
 				F48D554F2536BAE900CE6DE4 /* LaunchScreen.storyboard */,
 				F48D554A2536BAE700CE6DE4 /* Main.storyboard */,
+				383A69C626CB5DD1000910E8 /* Onboarding.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -220,7 +229,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F48D553C2536BAE700CE6DE4 /* Build configuration list for PBXProject "FoodPin" */;
+			buildConfigurationList = F48D553C2536BAE700CE6DE4 /* Build configuration list for PBXProject "FoodPinSearch" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -246,6 +255,7 @@
 				F42A6C702543E05F009E2876 /* Nunito-Regular.ttf in Resources */,
 				F48D55512536BAE900CE6DE4 /* LaunchScreen.storyboard in Resources */,
 				F48D554E2536BAE900CE6DE4 /* Assets.xcassets in Resources */,
+				383A69C826CB5DD1000910E8 /* Onboarding.storyboard in Resources */,
 				F42A6C6F2543E05F009E2876 /* Nunito-Bold.ttf in Resources */,
 				F48D554C2536BAE700CE6DE4 /* Main.storyboard in Resources */,
 			);
@@ -260,6 +270,7 @@
 			files = (
 				F4D1A1CE253D8C5600CCD3FA /* Restaurant.swift in Sources */,
 				F42A6C822549DE6F009E2876 /* NavigationController.swift in Sources */,
+				383A69CC26CBABE2000910E8 /* WalkthroughPageViewController.swift in Sources */,
 				F480451A25512B7F00DDC281 /* NewRestaurantController.swift in Sources */,
 				F48F8132254FC0860062C520 /* ReviewViewController.swift in Sources */,
 				F42A6C76254726D9009E2876 /* RestaurantDetailTextCell.swift in Sources */,
@@ -270,6 +281,7 @@
 				F48D55472536BAE700CE6DE4 /* SceneDelegate.swift in Sources */,
 				F42A6C8D254AC3D6009E2876 /* RestaurantDetailMapCell.swift in Sources */,
 				F4D1A1D6253EB90C00CCD3FA /* RestaurantDiffableDataSource.swift in Sources */,
+				383A69CA26CBA95C000910E8 /* WalkthroughContentViewController.swift in Sources */,
 				F4D1A1D92540370700CCD3FA /* RestaurantDetailViewController.swift in Sources */,
 				F42A6C73254569E3009E2876 /* RestaurantDetailHeaderView.swift in Sources */,
 				F48D555B2536BFE000CE6DE4 /* RestaurantTableViewController.swift in Sources */,
@@ -282,6 +294,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		383A69C626CB5DD1000910E8 /* Onboarding.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				383A69C726CB5DD1000910E8 /* Base */,
+			);
+			name = Onboarding.storyboard;
+			sourceTree = "<group>";
+		};
 		F48D554A2536BAE700CE6DE4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -456,7 +476,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F48D553C2536BAE700CE6DE4 /* Build configuration list for PBXProject "FoodPin" */ = {
+		F48D553C2536BAE700CE6DE4 /* Build configuration list for PBXProject "FoodPinSearch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F48D55532536BAE900CE6DE4 /* Debug */,
