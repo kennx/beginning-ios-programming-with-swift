@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol WalkthroughPageViewControllerDelegate: class {
+  func didUpdatePageIndex(currentIndex: Int)
+}
+
 class WalkthroughPageViewController: UIPageViewController {
+  
+  weak var walkthroughDelegate: WalkthroughPageViewControllerDelegate?
   
   var pageHeadings: [String] = ["CREATE YOUR OWN FOOD GUIDE", "SHOW YOU THE LOCATION", "DISCOVER GREAT RESTAURANTS"]
   var pageImages: [String] = ["onboarding-1", "onboarding-2", "onboarding-3"]
@@ -17,11 +23,19 @@ class WalkthroughPageViewController: UIPageViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     dataSource = self
+    delegate = self
     
     if let startingViewController = contentViewController(at: 0) {
       setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
     }
     // Do any additional setup after loading the view.
+  }
+  
+  func forwardPage() {
+    currentIndex += 1
+    if let nextViewController = contentViewController(at: currentIndex) {
+      setViewControllers([nextViewController], direction: .forward, animated: true, completion: nil)
+    }
   }
   
   
@@ -73,3 +87,17 @@ extension WalkthroughPageViewController: UIPageViewControllerDataSource {
   
   
 }
+
+
+extension WalkthroughPageViewController: UIPageViewControllerDelegate {
+  func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    if completed {
+      if let contentViewController = pageViewController.viewControllers?.first as? WalkthroughContentViewController {
+        currentIndex = contentViewController.index
+        
+        walkthroughDelegate?.didUpdatePageIndex(currentIndex: currentIndex)
+      }
+    }
+  }
+}
+

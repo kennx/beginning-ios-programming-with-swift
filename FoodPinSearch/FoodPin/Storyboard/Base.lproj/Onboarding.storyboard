@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Walkthrough View Controller-->
         <scene sceneID="m7a-B3-7qU">
             <objects>
-                <viewController id="Iws-QS-fyz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WalkthroughViewController" id="Iws-QS-fyz" customClass="WalkthroughViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8br-7h-n7y">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,6 +44,9 @@
                                                 <state key="normal" title="NEXT">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="nextButtonTappedWithSender:" destination="Iws-QS-fyz" eventType="touchUpInside" id="nCb-Vi-gUT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s44-xl-frO">
                                                 <rect key="frame" x="80" y="116.33333333333337" width="30" height="29"/>
@@ -51,6 +54,9 @@
                                                 <state key="normal" title="Skip">
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="skipButtonTappedWithSender:" destination="Iws-QS-fyz" eventType="touchUpInside" id="aE8-32-Xgb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -75,6 +81,11 @@
                             <constraint firstItem="ds3-kL-mG4" firstAttribute="top" secondItem="8br-7h-n7y" secondAttribute="top" id="yv1-MS-n9A"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="DoJ-fF-qZ7" id="sIO-4f-yvh"/>
+                        <outlet property="pageControl" destination="LYu-KH-Sc7" id="SDl-Vm-FVn"/>
+                        <outlet property="skipButton" destination="s44-xl-frO" id="YFB-z1-20I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O9f-fy-rY9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
