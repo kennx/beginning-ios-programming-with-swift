@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Cv-SH-5pB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1bZ-sI-7uO">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -414,7 +414,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="813.84615384615381" y="88.862559241706151"/>
+            <point key="canvasLocation" x="1743.0769230769231" y="88.862559241706151"/>
         </scene>
         <!--Restaurant Detail View Controller-->
         <scene sceneID="eI0-Bp-Tl4">
@@ -660,7 +660,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3l-Qa-mJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2547.6923076923076" y="88.862559241706151"/>
+            <point key="canvasLocation" x="3511" y="-58"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="KWv-es-rOg">
@@ -690,7 +690,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cxh-Y3-Nos" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1625" y="89"/>
+            <point key="canvasLocation" x="2553.8461538461538" y="88.862559241706151"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="tZH-MF-Re9">
@@ -785,12 +785,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLM-BQ-Bx5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="6ui-ye-HPD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2380" y="783.41232227488149"/>
+            <point key="canvasLocation" x="4458" y="-2"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favorites-->
         <scene sceneID="j94-qC-7vx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Cv-SH-5pB" customClass="NavigationController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="tag.fill" catalog="system" selectedImage="tag.fill" id="gms-zA-GEk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iKI-KZ-9DP">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -803,7 +804,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="01b-Qa-6W5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26" y="89"/>
+            <point key="canvasLocation" x="903.07692307692309" y="88.862559241706151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8pH-g8-NSq">
@@ -821,7 +822,47 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zdj-7Y-F45" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="814" y="-774"/>
+            <point key="canvasLocation" x="635" y="-904"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jFt-l7-duB">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="1bZ-sI-7uO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i9r-Lb-vI6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4Cv-SH-5pB" kind="relationship" relationship="viewControllers" id="P7H-vD-33w"/>
+                        <segue destination="tiZ-2t-fMb" kind="relationship" relationship="viewControllers" id="ui0-Q9-PXX"/>
+                        <segue destination="ZME-AZ-n4S" kind="relationship" relationship="viewControllers" id="o3B-2N-Hoc"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hp4-Jq-0rI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.153846153846153" y="88.862559241706151"/>
+        </scene>
+        <!--Discover-->
+        <scene sceneID="82M-AU-Xle">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Discover" id="tiZ-2t-fMb" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Quq-0r-s1t"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXY-lu-yau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="903" y="832"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="o3z-0g-IwY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="About" id="ZME-AZ-n4S" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="BUN-hL-Zkn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGU-wg-mhC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-32" y="1538"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
@@ -838,6 +879,7 @@
         <image name="newphoto" width="1840" height="1380"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="sad" width="78" height="87"/>
+        <image name="tag.fill" catalog="system" width="128" height="119"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="NavigationBarTitle">
             <color red="0.85490196078431369" green="0.37647058823529411" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

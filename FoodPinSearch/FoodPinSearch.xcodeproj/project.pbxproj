@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		380B2DDC26CE38B000EBEF9D /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380B2DDB26CE38B000EBEF9D /* Discover.storyboard */; };
+		380B2DDE26CE38D700EBEF9D /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 380B2DDD26CE38D700EBEF9D /* About.storyboard */; };
 		383A69C826CB5DD1000910E8 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383A69C626CB5DD1000910E8 /* Onboarding.storyboard */; };
 		383A69CA26CBA95C000910E8 /* WalkthroughContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383A69C926CBA95C000910E8 /* WalkthroughContentViewController.swift */; };
 		383A69CC26CBABE2000910E8 /* WalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383A69CB26CBABE2000910E8 /* WalkthroughPageViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		380B2DDB26CE38B000EBEF9D /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		380B2DDD26CE38D700EBEF9D /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
 		383A69C726CB5DD1000910E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboarding.storyboard; sourceTree = "<group>"; };
 		383A69C926CBA95C000910E8 /* WalkthroughContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughContentViewController.swift; sourceTree = "<group>"; };
 		383A69CB26CBABE2000910E8 /* WalkthroughPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughPageViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 			children = (
 				F48D554F2536BAE900CE6DE4 /* LaunchScreen.storyboard */,
 				F48D554A2536BAE700CE6DE4 /* Main.storyboard */,
+				380B2DDB26CE38B000EBEF9D /* Discover.storyboard */,
+				380B2DDD26CE38D700EBEF9D /* About.storyboard */,
 				383A69C626CB5DD1000910E8 /* Onboarding.storyboard */,
 			);
 			path = Storyboard;
@@ -257,9 +263,11 @@
 			files = (
 				F42A6C702543E05F009E2876 /* Nunito-Regular.ttf in Resources */,
 				F48D55512536BAE900CE6DE4 /* LaunchScreen.storyboard in Resources */,
+				380B2DDE26CE38D700EBEF9D /* About.storyboard in Resources */,
 				F48D554E2536BAE900CE6DE4 /* Assets.xcassets in Resources */,
 				383A69C826CB5DD1000910E8 /* Onboarding.storyboard in Resources */,
 				F42A6C6F2543E05F009E2876 /* Nunito-Bold.ttf in Resources */,
+				380B2DDC26CE38B000EBEF9D /* Discover.storyboard in Resources */,
 				F48D554C2536BAE700CE6DE4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
